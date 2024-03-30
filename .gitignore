@@ -1,0 +1,25 @@
+myenv/
+pgadmin/
+__pycache__/
+.idea/
+temp.py
+# dependencies
+demo-frontend-2/node_modules
+demo-frontend-2/.pnp
+demo-frontend-2/.pnp.js
+
+# testing
+demo-frontend-2//coverage
+
+# production
+demo-frontend-2//build
+
+# misc
+demo-frontend-2/.DS_Store
+demo-frontend-2/.env.local
+demo-frontend-2/.env.development.local
+demo-frontend-2/.env.test.local
+demo-frontend-2/.env.production.local
+
+demo-frontend-2/npm-debug.log*
+demo-frontend-2/yarn-debug.log*

@@ -1,0 +1,12 @@
+google-api-python-client
+mysql-connector-python
+flask
+flask_cors
+redis
+isodate
+cryptography
+pydantic
+pymysql
+sqlalchemy
+alembic
+psycopg2
