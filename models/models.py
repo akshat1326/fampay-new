@@ -25,3 +25,24 @@ class PaginatedReturn(BaseModel):
 
 class SearchReturn(BaseModel):
     video: List[Any]
+
+
+class DatabaseException(Exception):
+    def __init__(self, message, e):
+        super().__init__(e)
+        self.message = message
+
+    def __repr__(self):
+        return f"{self.message}"
+
+
+class SearchException(Exception):
+    def __init__(self, message, e):
+        super().__init__(e)
+        self.message = message
+
+    def __repr__(self):
+        return f"{self.message}"
+
+
+

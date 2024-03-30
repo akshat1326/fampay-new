@@ -45,6 +45,11 @@ services:
       - db
     networks:
       - app-network
+    environment:
+      - DATABASE_HOST=db
+      - DATABASE_PASSWORD=postgres
+      - DATABASE_USER=postgres
+      - DATABASE_NAME=YoutubeDB
 volumes:
   postgres_data:
 

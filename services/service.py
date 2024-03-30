@@ -1,34 +1,20 @@
 from sqlalchemy.exc import SQLAlchemyError
 
-from dao.video_sql_queries import VideoInformationRepo, PaginatedReturn, QueryExecutionException, ConnectionNotFoundException, \
+from dao.video_sql_queries import VideoInformationRepo, PaginatedReturn, QueryExecutionException, \
+    ConnectionNotFoundException, \
     QueryNotFoundException, SearchReturn
 from googleapiclient.discovery import build
 from isodate import parse_duration
 from googleapiclient.errors import HttpError
 from config.api_keys import api_keys
-class DatabaseException(Exception):
-    def __init__(self, message, e):
-        super().__init__(e)
-        self.message = message
-
-    def __repr__(self):
-        return f"{self.message}"
-
-
-class SearchException(Exception):
-    def __init__(self, message, e):
-        super().__init__(e)
-        self.message = message
-
-    def __repr__(self):
-        return f"{self.message}"
+from models.models import DatabaseException, SearchException
 
 
 class VideoInfoService:
     def __init__(self):
         self.videoInfoRepo = VideoInformationRepo()
 
-    def fetch_paginated_videos_from_db(self,page, per_page) -> PaginatedReturn:
+    def fetch_paginated_videos_from_db(self, page, per_page) -> PaginatedReturn:
         try:
             paginated_return = self.videoInfoRepo.get_paginated_videos_list_from_db(page, per_page)
         except QueryExecutionException as e:
