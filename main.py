@@ -23,5 +23,5 @@ def run_periodically(interval, func, *args):
 
 
 if __name__ == '__main__':
-    #run_periodically(60, service.fetch_youtube_videos_by_query, "Cricket")
+    run_periodically(60, service.fetch_youtube_videos_by_query, "Cricket")
     app.run(host='0.0.0.0', debug=True, port=5020)
