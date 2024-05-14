@@ -1,4 +1,4 @@
-# FamPay - YouTube Trending API
+# YouTube Trending API
 
 
 ## Contents
